@@ -30,6 +30,7 @@ public class Run {
 
     public static void main(String... arg) throws Exception {
 
+        System.out.println("Initializing Camera ...");
         FaceDetector face = new FaceDetector();
 
 //        // Frame setting
@@ -45,6 +46,8 @@ public class Run {
         // Read the video stream 
         Mat cameraImage = new Mat();
         VideoCapture camera = new VideoCapture(0);
+        Thread.sleep(2000);
+        
         if (camera.isOpened()) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Type \\q for exit....");
@@ -85,6 +88,8 @@ public class Run {
                     readString = scanner.nextLine();
                 }
             }
+        } else {
+             System.out.println("Camera not initialized.");
         }
     }
 
