@@ -1,6 +1,6 @@
-package cl.cc.configuration;
+package cl.cc.web.configuration;
 
-import cl.cc.service.logic.SendMessageTask;
+import cl.cc.web.service.logic.SendMessageTask;
 import org.quartz.Trigger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

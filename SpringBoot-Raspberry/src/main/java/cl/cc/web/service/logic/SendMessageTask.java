@@ -1,6 +1,6 @@
-package cl.cc.service.logic;
+package cl.cc.web.service.logic;
 
-import cl.cc.service.endpoint.MessageDispatcher;
+import cl.cc.web.service.endpoint.MessageDispatcher;
 import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

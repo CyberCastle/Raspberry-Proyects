@@ -1,4 +1,4 @@
-package cl.cc.configuration;
+package cl.cc.web.configuration;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -21,7 +21,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 
         // Read application Settings
         final AnnotationConfigWebApplicationContext root = new AnnotationConfigWebApplicationContext();
-        root.scan("cl.cc");
+        root.scan("cl.cc.web");
         context.addListener(new ContextLoaderListener(root));
 
         // Web enviroment settings

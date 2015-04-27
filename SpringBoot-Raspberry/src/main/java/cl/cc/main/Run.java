@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  *
  * Set up Spring boot and launch the application
  */
-@ComponentScan
+@ComponentScan(basePackages = "cl.cc.web")
 @EnableAutoConfiguration
 public class Run {
 

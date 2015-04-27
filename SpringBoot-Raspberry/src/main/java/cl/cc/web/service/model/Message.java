@@ -1,4 +1,4 @@
-package cl.cc.service.model;
+package cl.cc.web.service.model;
 
 /**
  *

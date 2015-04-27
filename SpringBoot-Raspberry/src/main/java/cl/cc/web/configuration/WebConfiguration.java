@@ -1,4 +1,4 @@
-package cl.cc.configuration;
+package cl.cc.web.configuration;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

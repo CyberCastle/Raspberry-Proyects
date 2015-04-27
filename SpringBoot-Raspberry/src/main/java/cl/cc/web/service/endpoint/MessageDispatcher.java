@@ -1,6 +1,6 @@
-package cl.cc.service.endpoint;
+package cl.cc.web.service.endpoint;
 
-import cl.cc.service.model.Message;
+import cl.cc.web.service.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.messaging.core.MessageSendingOperations;

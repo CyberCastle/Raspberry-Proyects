@@ -1,4 +1,4 @@
-package cl.cc.configuration;
+package cl.cc.web.configuration;
 
 import java.util.List;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package cl.cc.service.endpoint;
+package cl.cc.web.service.endpoint;
 
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.core.io.ClassPathResource;
