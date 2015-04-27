@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Probando WebSockets</title>
+
+        <script src="asset/jquery/jquery.min.js"></script>
+        <script src="asset/sockjs-client/sockjs.min.js"></script>
+        <script src="asset/stomp-websocket/stomp.min.js"></script>
+
+        <!-- Application JS and Styles -->
+        <link rel="stylesheet" href="styles/app.css">
+        <script src="scripts/app.js"></script>
+    </head>
+    <body onload="disconnect()">
+
+        <div>
+            <div>
+                <button id="connect" onclick="connect();">Connect</button>
+                <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+            </div>
+            <div id="container">
+                <p id="type"><strong class="title">Tipo: </strong><span></span></p>
+                <p id="title"><strong class="title">Título: </strong><span></span></p>
+                <p id="text"><strong class="title">Texto: </strong><span></span></p>
+            </div>
+        </div>
+    </body>
+</html>
