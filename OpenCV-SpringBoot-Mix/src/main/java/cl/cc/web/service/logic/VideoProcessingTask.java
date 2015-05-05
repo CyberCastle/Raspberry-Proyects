@@ -28,9 +28,9 @@ public class VideoProcessingTask implements InitializingBean, DisposableBean {
     private VideoCapture camera;
 
     public void startTask() {
-
+        this.looped = true;
         if (this.camera.isOpened()) {
-            System.out.println("Beging Video Capture...");
+            System.out.println("---->>> Beging Video Capture...");
             while (this.looped) {
                 this.camera.read(this.cameraImage);
                 if (!this.cameraImage.empty()) {
@@ -41,32 +41,30 @@ public class VideoProcessingTask implements InitializingBean, DisposableBean {
 
                     this.face.detect(i);
                     Integer facesDetected = face.getFaceRegions().length;
-                    System.out.println("Faces detected: " + facesDetected);
+                    System.out.println("---->>> Faces detected: " + facesDetected);
 
                     this.messageDispatcher.sendMessage("Demo",
-                            "Probando Spring Boot + Quartz + Webjars",
+                            "Probando Spring Boot + OpenCV + Webjars",
                             "Faces detected: " + facesDetected);
 
                     i.release();
-                } else {
-                    System.out.println("Ending Video Capture...");
+                } else { // No hay video, terminamos
                     break;
                 }
             }
+            System.out.println("---->>> Ending Video Capture...");
         }
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("Initializing Camera ...");
+        System.out.println("---->>> Initializing Camera ...");
         this.face = new FaceDetector();
         this.cameraImage = new Mat(); // Mat from video stream 
         this.camera = new VideoCapture(0);
 
-        System.out.println("Waiting for 2 seconds...");
+        System.out.println("---->>> Waiting for 2 seconds...");
         Thread.sleep(2000);
-
-        this.looped = true;
     }
 
     public void stopTask() {
@@ -75,7 +73,7 @@ public class VideoProcessingTask implements InitializingBean, DisposableBean {
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("Closing Camera ...");
+        System.out.println("---->>> Closing Camera ...");
         this.looped = false;
         this.cameraImage.release();
         this.camera.release();
